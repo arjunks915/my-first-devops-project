@@ -12,15 +12,14 @@ with open("index.html", "r") as file:
 
 # This is a basic find-and-replace to insert our metrics dynamically
 updated_content = html_content.replace(
-    '💻 Server Load: Stable', f'💻 Server Load: {cpu_load}'
+    '💻 Server Load: 14%', f'💻 Server Load: {cpu_load}'
 )
-updated_content = html_content.replace(
-    '💾 Memory Available: 84%', f'💾 Memory sucks: {memory_sucks}'
+updated_content = updated_content.replace(
+    '💾 Memory Available: 93%', f'💾 Memory sucks: {memory_sucks}'
 )
 updated_content = updated_content.replace(
     'Pipeline Deployment Verification Active', f'Last System Check: {current_time}'
 )
-
 # 3. Save the changes back to index.html
 with open("index.html", "w") as file:
     file.write(updated_content)
