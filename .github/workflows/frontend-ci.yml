@@ -1,3 +1,4 @@
+# Triggering a fresh workflow run
 name: Deploy Automated Dashboard to GitHub Pages
 
 on:
