@@ -17,6 +17,7 @@ updated_content = html_content.replace(
 updated_content = updated_content.replace(
     '💾 Memory Available: 84%', f'💾 Memory sucks: {memory_sucks}'
 )
+)
 updated_content = updated_content.replace(
     'Pipeline Deployment Verification Active', f'Last System Check: {current_time}'
 )
