@@ -1,67 +1,32 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>arjun - Cloud Resume</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevOps Status Dashboard</title>
     <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            max-width: 800px;
-            margin: 40px auto;
-            padding: 0 20px;
-            background-color: #f4f7f6;
-            color: #333;
-            line-height: 1.6;
-        }
-        h1 {
-            color: #2c3e50;
-            border-bottom: 2px solid #3498db;
-            padding-bottom: 10px;
-        }
-        h2 {
-            color: #2980b9;
-            margin-top: 30px;
-        }
-        ul {
-            background: white;
-            padding: 20px 40px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-        }
-        li {
-            margin-bottom: 10px;
-        }
-        hr {
-            border: 0;
-            height: 1px;
-            background: #ccc;
-            margin: 20px 0;
-        }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #0f172a; color: #f8fafc; text-align: center; padding: 50px; }
+        .card { background: #1e293b; border-radius: 12px; padding: 30px; display: inline-block; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); max-width: 400px; width: 100%; border: 1px solid #334155; }
+        .status-badge { background-color: #22c55e; color: #052e16; padding: 6px 12px; border-radius: 20px; font-weight: bold; font-size: 0.9rem; }
+        h1 { color: #38bdf8; margin-bottom: 5px; }
+        p { color: #94a3b8; }
+        .metric { font-size: 1.2rem; margin: 20px 0; font-family: monospace; color: #e2e8f0; }
     </style>
 </head>
 <body>
-
-    <h1>arjun</h1>
-    <p>Welcome to my Cloud Resume page! I am an aspiring DevOps and Cloud Engineer.</p>
-
-    <hr>
-
-    <h2>About Me</h2>
-    <p>I am a student currently engaged in academic project work, focusing on cloud automation, Linux systems, and Python scripting.</p>
-
-    <h2>Technical Skills</h2>
-    <ul>
-        <li><strong>Operating Systems:</strong> Linux (Ubuntu/Bash)</li>
-        <li><strong>Programming:</strong> Python, HTML</li>
-        <li><strong>Tools:</strong> GitHub, Git, VS Code</li>
-    </ul>
-<h2>Projects</h2>
-    <ul>
-        <li>
-            <strong>My First DevOps Project:</strong> Built and hosted a local web application server using Python and built a clean frontend interface with HTML and CSS.
-        </li>
-        <li>
-            <strong>Linux & Scripting Fundamentals:</strong> Managed file systems, configured local directory structures, and moved automated data logs using Bash terminal commands.
-        </li>
-    </ul>
+    <div class="card">
+        <h1>Cloud System Status</h1>
+        <p>Automated DevOps Monitoring Panel</p>
+        <hr style="border-color: #334155; margin: 20px 0;">
+        
+        <p>Operational Status: <span class="status-badge">ONLINE</span></p>
+        
+        <div class="metric">
+            💻 Server Load: 14% <br>
+            💾 Memory Available: 93%
+        </div>
+        
+        <small style="color: #64748b;">Last System Check: 2026-06-30 17:39:48</small>
+    </div>
 </body>
 </html>
