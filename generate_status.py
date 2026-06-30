@@ -3,7 +3,7 @@ import random
 
 # 1. Generate some dummy data representing server metrics
 cpu_load = f"{random.randint(5, 45)}%"
-memory_available = f"{random.randint(60, 95)}%"
+memory_sucks = f"{random.randint(60, 95)}%"
 current_time = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
 # 2. Open our index.html file and inject the dynamic data
