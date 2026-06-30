@@ -1,25 +1,33 @@
-name: Live DevOps Pipeline
+name: Deploy Resume to GitHub Pages
 
 on:
   push:
     branches:
       - main
 
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
 jobs:
-  build-and-test:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - name: Step 1 - Fetching Code from GitHub Repository
+      - name: Checkout Code
         uses: actions/checkout@v4
 
-      - name: Step 2 - Simulating Code Quality Test
-        run: |
-          echo "Checking if index.html exists..."
-          test -f index.html
-          echo "Success: HTML file verified!"
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
 
-      - name: Step 3 - Simulating Production Build
-        run: |
-          echo "Optimizing code layouts..."
-          echo "Pipeline completed successfully!"
-          
+      - name: Upload Artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: '.'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
