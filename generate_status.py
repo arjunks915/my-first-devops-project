@@ -14,9 +14,8 @@ with open("index.html", "r") as file:
 updated_content = html_content.replace(
     '💻 Server Load: Stable', f'💻 Server Load: {cpu_load}'
 )
-updated_content = updated_content.replace(
+updated_content = html_content.replace(
     '💾 Memory Available: 84%', f'💾 Memory sucks: {memory_sucks}'
-)
 )
 updated_content = updated_content.replace(
     'Pipeline Deployment Verification Active', f'Last System Check: {current_time}'
