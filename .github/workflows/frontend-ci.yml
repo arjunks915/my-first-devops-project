@@ -1,33 +1,32 @@
-name: Deploy Resume to GitHub Pages
-
-on:
-  push:
-    branches:
-      - main
-
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-
-jobs:
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Code
-        uses: actions/checkout@v4
-
-      - name: Setup Pages
-        uses: actions/configure-pages@v4
-
-      - name: Upload Artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: '.'
-
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevOps Status Dashboard</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #0f172a; color: #f8fafc; text-align: center; padding: 50px; }
+        .card { background: #1e293b; border-radius: 12px; padding: 30px; display: inline-block; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); max-width: 400px; width: 100%; border: 1px solid #334155; }
+        .status-badge { background-color: #22c55e; color: #052e16; padding: 6px 12px; border-radius: 20px; font-weight: bold; font-size: 0.9rem; }
+        h1 { color: #38bdf8; margin-bottom: 5px; }
+        p { color: #94a3b8; }
+        .metric { font-size: 1.2rem; margin: 20px 0; font-family: monospace; color: #e2e8f0; }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>Cloud System Status</h1>
+        <p>Automated DevOps Monitoring Panel</p>
+        <hr style="border-color: #334155; margin: 20px 0;">
+        
+        <p>Operational Status: <span class="status-badge">ONLINE</span></p>
+        
+        <div class="metric">
+            💻 Server Load: Stable <br>
+            💾 Memory Available: 84%
+        </div>
+        
+        <small style="color: #64748b;">Pipeline Deployment Verification Active</small>
+    </div>
+</body>
+</html>
